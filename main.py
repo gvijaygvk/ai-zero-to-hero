@@ -7,7 +7,7 @@ def estimate_tokens(text: str) -> int:
     """Rough LLM token estimate: about 4 characters per token."""
     if not text:
         return 0
-    return max(1, len(text) // 4)
+    return max(1, len(text) // 3)
 
 
 def get_api_key(name: str = "ANTHROPIC_API_KEY") -> str:
