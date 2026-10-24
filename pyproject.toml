@@ -7,7 +7,9 @@ authors = [
     { name = "Vijay Kumar G", email = "gvijaygvk@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.2.4",
+]
 
 [project.scripts]
 ai-zero-to-hero = "ai_zero_to_hero:main"
@@ -21,3 +23,5 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.17.2",
 ]
+[tool.pytest.ini_options]
+pythonpath = ["."]
