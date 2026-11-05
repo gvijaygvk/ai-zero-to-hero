@@ -37,3 +37,6 @@ def test_square():
 
 def test_square_with_param():
     assert client.get("/square/3?negate=true").json()["square"] == -9
+
+def test_square_bad_422():
+    assert client.get("/square/abc").status_code == 422
